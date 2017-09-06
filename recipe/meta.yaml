@@ -1,4 +1,4 @@
-{% set version = "2.72.1.53" %}
+{% set version = "2.88.1.73" %}
 
 package:
   name: newrelic
@@ -7,10 +7,10 @@ package:
 source:
   fn: newrelic-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/n/newrelic/newrelic-{{ version }}.tar.gz
-  sha256: 3f601b32d850d8d56c24756706033ca5e3e3c83520151f5cab37d8a07acaaba2
+  sha256: 93452f678b63a537f63a2b8d6caccc3506f5db72586f12a1673cfc16bbe3147b
 
 build:
-  number: 1
+  number: 0
   script:
     - python setup.py install --single-version-externally-managed --record=record.txt
 
