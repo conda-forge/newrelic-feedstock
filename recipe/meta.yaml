@@ -34,7 +34,7 @@ test:
 
 about:
   home: http://newrelic.com/docs/python/new-relic-for-python
-  license: New Relic License
+  license: New Relic
   license_file: newrelic/LICENSE  # [unix]
   license_file: newrelic\LICENSE  # [win]
   summary: New Relic Python Agent
