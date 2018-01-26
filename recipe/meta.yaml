@@ -1,24 +1,26 @@
-{% set version = "2.88.1.73" %}
+{% set name = "newrelic" %}
+{% set version = "2.100.0.84" %}
+{% set sha256 = "b75123173ac5e8a20aa9d8120e20a7bf45c38a5aa5a4672fac6ce4c3e0c8046e" %}
 
 package:
-  name: newrelic
+  name: {{ name }}
   version: {{ version }}
 
 source:
-  fn: newrelic-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/n/newrelic/newrelic-{{ version }}.tar.gz
-  sha256: 93452f678b63a537f63a2b8d6caccc3506f5db72586f12a1673cfc16bbe3147b
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
   number: 0
-  script:
-    - python setup.py install --single-version-externally-managed --record=record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - libtool  # [unix]
     - python
     - setuptools
+    - pip
     - toolchain
   run:
     - python
@@ -35,9 +37,19 @@ test:
 about:
   home: http://newrelic.com/docs/python/new-relic-for-python
   license: New Relic
-  license_file: newrelic/LICENSE  # [unix]
-  license_file: newrelic\LICENSE  # [win]
+  license_file: newrelic/LICENSE
   summary: New Relic Python Agent
+  description: |
+    The newrelic package instruments your application for performance
+    monitoring and advanced performance analytics with New Relic.
+
+    Pinpoint and solve Python application performance issues down to the line
+    of code. New Relic APM is the only tool you’ll need to see everything in
+    your Python application, from the end user experience to server monitoring.
+    Trace problems down to slow database queries, slow 3rd party APIs and web
+    services, caching layers, and more. Monitor your app in a production
+    environment and make sure your app can stand a big spike in traffic by
+    running scalability reports.
 
 extra:
   recipe-maintainers:
