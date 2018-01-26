@@ -3,12 +3,22 @@ About newrelic
 
 Home: http://newrelic.com/docs/python/new-relic-for-python
 
-Package license: New Relic License
+Package license: New Relic
 
 Feedstock license: BSD 3-Clause
 
 Summary: New Relic Python Agent
 
+The newrelic package instruments your application for performance
+monitoring and advanced performance analytics with New Relic.
+
+Pinpoint and solve Python application performance issues down to the line
+of code. New Relic APM is the only tool you’ll need to see everything in
+your Python application, from the end user experience to server monitoring.
+Trace problems down to slow database queries, slow 3rd party APIs and web
+services, caching layers, and more. Monitor your app in a production
+environment and make sure your app can stand a big spike in traffic by
+running scalability reports.
 
 
 Current build status
@@ -66,6 +76,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
