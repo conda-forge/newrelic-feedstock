@@ -1,6 +1,6 @@
 {% set name = "newrelic" %}
-{% set version = "3.2.1.93" %}
-{% set sha256 = "e60204f6d6b41741021d078ad5145414c759ff2482e2136ce22c9957654d9ca7" %}
+{% set version = "3.2.2.94" %}
+{% set sha256 = "916f96ded421efa1c5f97d24fa4131cce513039b6e875ccbd090b852dddc104e" %}
 
 package:
   name: {{ name }}
