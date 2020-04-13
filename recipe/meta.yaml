@@ -1,5 +1,5 @@
 {% set name = "newrelic" %}
-{% set version = "5.10.0.138" %}
+{% set version = "5.12.0.140" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5d83887781683975bd75ec624baa8de5e1e75c2bf89e7269ed2811b559da1504
+  sha256: a3a5228d3d599583ce7ce9402d53f5e03e134a1aa33a27b33b74ef7547f7e1ce
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - newrelic-admin = newrelic.admin:main
