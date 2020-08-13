@@ -19,8 +19,8 @@ requirements:
   build:
     - {{ compiler('c') }}
   host:
-    - python
     - pip
+    - python
     - setuptools_scm
   run:
     - python
@@ -28,7 +28,7 @@ requirements:
 test:
   requires:
     - python
-    - ppip
+    - pip
   imports:
     - newrelic
   commands:
@@ -39,9 +39,14 @@ test:
 
 about:
   home: http://newrelic.com/docs/python/new-relic-for-python
-  license: New Relic
-  license_file: newrelic/LICENSE
+  license: Apache-2.0
+  license_file:
+    - LICENSE
+    - THIRD_PARTY_NOTICES.md
+    - newrelic/packages/wrapt/LICENSE
+    - newrelic/packages/urllib3/LICENSE.txt
   summary: New Relic Python Agent
+  dev_url: https://github.com/newrelic/newrelic-python-agent
   description: |
     The newrelic package instruments your application for performance
     monitoring and advanced performance analytics with New Relic.
