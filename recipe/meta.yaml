@@ -21,15 +21,18 @@ requirements:
   host:
     - python
     - pip
+    - setuptools_scm
   run:
     - python
 
 test:
   requires:
     - python
+    - ppip
   imports:
     - newrelic
   commands:
+    - python -m pip check
     - newrelic-admin help  # [unix]
     - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
     - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
