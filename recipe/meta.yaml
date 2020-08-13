@@ -1,5 +1,5 @@
 {% set name = "newrelic" %}
-{% set version = "5.14.1.144" %}
+{% set version = "5.16.0.145" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 340ebcdb0dd08bfb597c71598d6d8f746a93f7e4921f10b3616c9142c608a14d
+  sha256: 5d45260693c0e4e098bcf20be8322a710009701076cd1d65ae4c8b4898bc29bc
 
 build:
   number: 0
@@ -19,26 +19,34 @@ requirements:
   build:
     - {{ compiler('c') }}
   host:
-    - python
     - pip
+    - python
+    - setuptools_scm
   run:
     - python
 
 test:
   requires:
     - python
+    - pip
   imports:
     - newrelic
   commands:
+    - python -m pip check
     - newrelic-admin help  # [unix]
     - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
     - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
-  home: http://newrelic.com/docs/python/new-relic-for-python
-  license: New Relic
-  license_file: newrelic/LICENSE
+  home: https://newrelic.com/docs/python/new-relic-for-python
+  license: Apache-2.0
+  license_file:
+    - LICENSE
+    - THIRD_PARTY_NOTICES.md
+    - newrelic/packages/wrapt/LICENSE
+    - newrelic/packages/urllib3/LICENSE.txt
   summary: New Relic Python Agent
+  dev_url: https://github.com/newrelic/newrelic-python-agent
   description: |
     The newrelic package instruments your application for performance
     monitoring and advanced performance analytics with New Relic.
