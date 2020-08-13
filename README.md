@@ -1,9 +1,9 @@
 About newrelic
 ==============
 
-Home: http://newrelic.com/docs/python/new-relic-for-python
+Home: https://newrelic.com/docs/python/new-relic-for-python
 
-Package license: New Relic
+Package license: Apache-2.0
 
 Feedstock license: BSD-3-Clause
 
