@@ -38,7 +38,7 @@ test:
     - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
-  home: http://newrelic.com/docs/python/new-relic-for-python
+  home: https://newrelic.com/docs/python/new-relic-for-python
   license: Apache-2.0
   license_file:
     - LICENSE
