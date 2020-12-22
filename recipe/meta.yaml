@@ -1,5 +1,5 @@
 {% set name = "newrelic" %}
-{% set version = "5.22.1.152" %}
+{% set version = "5.24.0.153" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0cedc2df0b54c5fd451a5c6baefb11eb9fb3aa817f6fa0708e407f3917874358
+  sha256: a8ef9509258a8f0c952fe36c7d3c774552b65a5ca5e0348694b651170b8472dc
 
 build:
   number: 0
@@ -34,8 +34,6 @@ test:
   commands:
     - python -m pip check
     - newrelic-admin help  # [unix]
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: https://newrelic.com/docs/python/new-relic-for-python
