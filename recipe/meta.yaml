@@ -1,5 +1,5 @@
 {% set name = "newrelic" %}
-{% set version = "6.4.2.159" %}
+{% set version = "6.4.3.160" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 08a518af90505750ef2687411c0de7db438cc7b29e6d3855b27a7aae068b67b8
+  sha256: c92a6b5f15ed901d002cc4f339546a509838e424843f6d67c0e3aac48c54efc2
 
 build:
   number: 0
