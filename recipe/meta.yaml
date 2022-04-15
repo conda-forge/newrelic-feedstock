@@ -10,7 +10,7 @@ source:
   sha256: a7b1cb8fe601ded2893824ff4c2a1d46a264045b75850b08cdf3b5e309e4f481
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - newrelic-admin = newrelic.admin:main
