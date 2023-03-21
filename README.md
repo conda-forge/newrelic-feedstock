@@ -1,11 +1,11 @@
-About newrelic
-==============
+About newrelic-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/newrelic-feedstock/blob/main/LICENSE.txt)
 
 Home: https://newrelic.com/docs/python/new-relic-for-python
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/newrelic-feedstock/blob/main/LICENSE.txt)
 
 Summary: New Relic Python Agent
 
