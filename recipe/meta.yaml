@@ -1,17 +1,16 @@
-{% set name = "newrelic" %}
 {% set version = "9.3.0" %}
 
 package:
-  name: {{ name }}
+  name: newrelic
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/n/newrelic/newrelic-{{ version }}.tar.gz
   sha256: c2dd685527433f6b6fbffe58f83852b46c24b9713ebb8ee7af647e04c2de3ee4
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
   entry_points:
     - newrelic-admin = newrelic.admin:main
 
@@ -21,7 +20,7 @@ requirements:
   host:
     - pip
     - python
-    - setuptools_scm >=3.2,<4
+    - setuptools_scm >=3.2,<7
   run:
     - python
 
@@ -32,7 +31,7 @@ test:
   imports:
     - newrelic
   commands:
-    - python -m pip check
+    - pip check
     - newrelic-admin help  # [unix]
 
 about:
