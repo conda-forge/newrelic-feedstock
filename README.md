@@ -3,13 +3,13 @@ About newrelic-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/newrelic-feedstock/blob/main/LICENSE.txt)
 
-Home: https://newrelic.com/docs/python/new-relic-for-python
+Home: https://github.com/newrelic/newrelic-python-agent
 
 Package license: Apache-2.0
 
 Summary: New Relic Python Agent
 
-Development: https://github.com/newrelic/newrelic-python-agent
+Documentation: https://docs.newrelic.com/docs/agents/python-agent
 
 The newrelic package instruments your application for performance
 monitoring and advanced performance analytics with New Relic.

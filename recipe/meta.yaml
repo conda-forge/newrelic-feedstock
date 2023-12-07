@@ -1,17 +1,16 @@
-{% set name = "newrelic" %}
-{% set version = "9.2.0" %}
+{% set version = "9.3.0" %}
 
 package:
-  name: {{ name }}
+  name: newrelic
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 32395e1c6a97cc96427abaf4b274ccf00709613a68d18b51fc2c0711cda89bc7
+  url: https://pypi.io/packages/source/n/newrelic/newrelic-{{ version }}.tar.gz
+  sha256: c2dd685527433f6b6fbffe58f83852b46c24b9713ebb8ee7af647e04c2de3ee4
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
   entry_points:
     - newrelic-admin = newrelic.admin:main
 
@@ -21,7 +20,7 @@ requirements:
   host:
     - pip
     - python
-    - setuptools_scm >=3.2,<4
+    - setuptools_scm >=3.2,<7
   run:
     - python
 
@@ -32,11 +31,11 @@ test:
   imports:
     - newrelic
   commands:
-    - python -m pip check
+    - pip check
     - newrelic-admin help  # [unix]
 
 about:
-  home: https://newrelic.com/docs/python/new-relic-for-python
+  home: https://github.com/newrelic/newrelic-python-agent
   license: Apache-2.0
   license_file:
     - LICENSE
@@ -44,7 +43,7 @@ about:
     - newrelic/packages/wrapt/LICENSE
     - newrelic/packages/urllib3/LICENSE.txt
   summary: New Relic Python Agent
-  dev_url: https://github.com/newrelic/newrelic-python-agent
+  doc_url: https://docs.newrelic.com/docs/agents/python-agent
   description: |
     The newrelic package instruments your application for performance
     monitoring and advanced performance analytics with New Relic.
