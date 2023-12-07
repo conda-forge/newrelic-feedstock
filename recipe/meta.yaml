@@ -35,7 +35,7 @@ test:
     - newrelic-admin help  # [unix]
 
 about:
-  home: https://newrelic.com/docs/python/new-relic-for-python
+  home: https://github.com/newrelic/newrelic-python-agent
   license: Apache-2.0
   license_file:
     - LICENSE
@@ -43,7 +43,7 @@ about:
     - newrelic/packages/wrapt/LICENSE
     - newrelic/packages/urllib3/LICENSE.txt
   summary: New Relic Python Agent
-  dev_url: https://github.com/newrelic/newrelic-python-agent
+  doc_url: https://docs.newrelic.com/docs/agents/python-agent
   description: |
     The newrelic package instruments your application for performance
     monitoring and advanced performance analytics with New Relic.
