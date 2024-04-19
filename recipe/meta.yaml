@@ -1,4 +1,4 @@
-{% set version = "9.8.0" %}
+{% set version = "9.9.0" %}
 
 package:
   name: newrelic
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/newrelic/newrelic-{{ version }}.tar.gz
-  sha256: 373ceaf8876019cbc8893c0d3eac979aab26a8476902e409937b34b5581510d1
+  sha256: 2182673a01f04a0ed4a0bb3f49e8fa869044c37558c8f409c96de13105f58a57
 
 build:
   number: 0
@@ -19,6 +19,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - pip
     - python
