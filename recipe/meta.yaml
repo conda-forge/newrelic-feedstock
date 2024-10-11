@@ -44,7 +44,6 @@ about:
     - LICENSE
     - THIRD_PARTY_NOTICES.md
     - newrelic/packages/wrapt/LICENSE
-    - newrelic/packages/urllib3/LICENSE.txt
   summary: New Relic Python Agent
   doc_url: https://docs.newrelic.com/docs/agents/python-agent
   description: |
