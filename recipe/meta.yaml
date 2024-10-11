@@ -1,4 +1,4 @@
-{% set version = "10.0.0" %}
+{% set version = "10.1.0" %}
 
 package:
   name: newrelic
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/newrelic/newrelic-{{ version }}.tar.gz
-  sha256: 548b538c3e95b589a30565bff668285ca74bb64069eb1d6f643bde9768944f53
+  sha256: d51db5922fc549b69e7b4fae70e9a91011a079e99bb380e8cc06933e6c4d26f7
 
 build:
   number: 0
@@ -23,7 +23,7 @@ requirements:
   host:
     - pip
     - python
-    - setuptools_scm >=3.2,<7
+    - setuptools_scm >=3.2,<9
   run:
     - python
 
@@ -44,7 +44,6 @@ about:
     - LICENSE
     - THIRD_PARTY_NOTICES.md
     - newrelic/packages/wrapt/LICENSE
-    - newrelic/packages/urllib3/LICENSE.txt
   summary: New Relic Python Agent
   doc_url: https://docs.newrelic.com/docs/agents/python-agent
   description: |
