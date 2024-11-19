@@ -5,11 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/n/newrelic/newrelic-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/n/newrelic/newrelic-{{ version }}.tar.gz
   sha256: 26040d0b707c30dba2c93b3122e87b39d98cc4910bcbb518bf7ab7c8ab62a5b8
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
   entry_points:
     - newrelic-admin = newrelic.admin:main
@@ -23,6 +23,7 @@ requirements:
   host:
     - pip
     - python
+    - setuptools
     - setuptools_scm >=3.2,<9
   run:
     - python
