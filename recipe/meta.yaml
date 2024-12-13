@@ -1,4 +1,4 @@
-{% set version = "10.3.1" %}
+{% set version = "10.4.0" %}
 
 package:
   name: newrelic
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/n/newrelic/newrelic-{{ version }}.tar.gz
-  sha256: 203573e485b36d6f2deb91e974a80a97b70a798b91751480f43f24193c3848c8
+  sha256: 4115eb9e5c97ad14e8cbae23dd5275dc162beb2b140c58ac4ba786c020f51aff
 
 build:
   number: 0
