@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: 10.5.0
+  version: "10.6.0"
   python_min: ${{ python_min }}.*
 
 package:
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/n/newrelic/newrelic-${{ version }}.tar.gz
-  sha256: c889f74914a898317e6c037ae6ef4692cbd3f42c6fce2fd1a70d31b3aa9ca967
+  sha256: 46d6f39a9cb89cca2440211e272e6a13bb89802865a4c2b2cd9d613c1488c3ba
 
 build:
-  number: 1
+  number: 0
   # only build for the minimal python version
   skip: not (match(python, python_min) and is_abi3 == 'true')
   script:
