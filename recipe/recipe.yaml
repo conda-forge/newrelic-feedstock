@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "10.6.0"
+  version: "10.7.0"
   python_min: ${{ python_min }}.*
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/n/newrelic/newrelic-${{ version }}.tar.gz
-  sha256: 46d6f39a9cb89cca2440211e272e6a13bb89802865a4c2b2cd9d613c1488c3ba
+  sha256: ac9716c115ddcf54b54115391a84ed2c318ae943b4f598b4d0248cd6edb12414
 
 build:
   number: 0
