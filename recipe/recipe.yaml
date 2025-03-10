@@ -14,7 +14,7 @@ source:
   sha256: ac9716c115ddcf54b54115391a84ed2c318ae943b4f598b4d0248cd6edb12414
 
 build:
-  number: 0
+  number: 1
   # only build for the minimal python version
   skip: not (match(python, python_min) and is_abi3 == 'true')
   script:
