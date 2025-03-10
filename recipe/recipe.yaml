@@ -40,11 +40,16 @@ requirements:
     - setuptools_scm >=3.2,<9
   run:
     - python
+  ignore_run_exports:
+    from_package:
+      - cross-python_${{ target_platform }}
 
 tests:
   - python:
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "!=${{ python_min }}.*"
       imports: newrelic
   - script:
       - if: unix
