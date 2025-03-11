@@ -3,7 +3,6 @@ schema_version: 1
 
 context:
   version: "10.7.0"
-  python_min: ${{ python_min }}.*
 
 package:
   name: newrelic
@@ -15,12 +14,9 @@ source:
 
 build:
   number: 1
-  # only build for the minimal python version
-  skip: not (match(python, python_min) and is_abi3 == 'true')
   script:
     - ${{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation --disable-pip-version-check
   python:
-    version_independent: true
     entry_points:
       - newrelic-admin = newrelic.admin:main
 
@@ -35,21 +31,14 @@ requirements:
   host:
     - pip
     - python
-    - python-abi3
     - setuptools
     - setuptools_scm >=3.2,<9
   run:
     - python
-  ignore_run_exports:
-    from_package:
-      - cross-python_${{ target_platform }}
 
 tests:
   - python:
       pip_check: true
-      python_version:
-        - ${{ python_min }}.*
-        - 3.13.*
       imports: newrelic
   - script:
       - if: unix
