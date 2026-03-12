@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "11.5.0"
+  version: "12.0.0"
 
 package:
   name: newrelic
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/n/newrelic/newrelic-${{ version }}.tar.gz
-  sha256: 39607be7a43d1bff59119039b0e9c145bf27debbc2075ec24549817a8faf5a5c
+  sha256: 403bb84b803bf5e2385edd31d36ff9f6e89f8351f5a680a4e8fe57d4afcb0505
 
 build:
   number: 0
