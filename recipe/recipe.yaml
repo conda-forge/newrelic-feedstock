@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "13.2.0"
+  version: "13.3.0"
 
 package:
   name: newrelic
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/n/newrelic/newrelic-${{ version }}.tar.gz
-  sha256: 03cee31fc0b19bbf0c7b1fa7becc58a2bf2c04316791dcfc83c755f4ae07f274
+  sha256: d95ec9a2911f4641ba1c7a381902aa983747b2a5cb3416e2df53785355547571
 
 build:
-  number: 1
+  number: 0
   script:
     - ${{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation --disable-pip-version-check
   python:
