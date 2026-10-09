@@ -9,13 +9,13 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/n/newrelic/newrelic-${{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/n/newrelic/newrelic-${{ version }}.tar.gz
   sha256: 13b07659a892e07c5ffffe7041d439191cd1a6100119af30be49d0f04b42384f
 
 build:
   number: 0
   script:
-    - ${{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation --disable-pip-version-check
+    - ${{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation --disable-pip-version-check --check-build-dependencies
   python:
     entry_points:
       - newrelic-admin = newrelic.admin:main
@@ -37,6 +37,11 @@ requirements:
     - python
 
 tests:
+  - package_contents:
+      strict: true
+      site_packages:
+        - newrelic/**
+        - newrelic-${{ version }}.dist-info/**
   - python:
       pip_check: true
       imports: newrelic
@@ -52,7 +57,8 @@ about:
     - newrelic/packages/wrapt/LICENSE
     - newrelic/packages/urllib3/LICENSE.txt
   summary: New Relic Python Agent
-  homepage: https://github.com/newrelic/newrelic-python-agent
+  homepage: https://pypi.org/project/newrelic
+  repository: https://github.com/newrelic/newrelic-python-agent
   documentation: https://docs.newrelic.com/docs/agents/python-agent
   description: |
     The newrelic package instruments your application for performance
