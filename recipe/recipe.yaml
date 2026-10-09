@@ -39,6 +39,10 @@ requirements:
 tests:
   - package_contents:
       strict: true
+      files:
+        - if: win
+          then:
+            - Scripts/newrelic-admin-script.py
       bin:
         - newrelic-admin
       site_packages:
