@@ -39,6 +39,8 @@ requirements:
 tests:
   - package_contents:
       strict: true
+      bin:
+        - newrelic-admin
       site_packages:
         - newrelic/**
         - newrelic-${{ version }}.dist-info/**
