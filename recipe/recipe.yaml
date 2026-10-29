@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "14.1.0"
+  version: "14.2.0"
 
 package:
   name: newrelic
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/n/newrelic/newrelic-${{ version }}.tar.gz
-  sha256: a294ddafd48602af2bb5b0b5b6302a6c96c38f714a65616e5457c4a0675c2906
+  sha256: 51d92623e0af9ea65bfa783926a8051e25b93ab077dc20cb2856bca61bd0e047
 
 build:
   number: 0
